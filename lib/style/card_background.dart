@@ -6,7 +6,11 @@ class CardBackgrounds {
   static Widget black = Container(
     width: double.maxFinite,
     height: double.maxFinite,
-    color: Color(0xff0B0B0F),
+    decoration: BoxDecoration(
+        gradient: LinearGradient(
+            colors: [Colors.pink, Colors.purple],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight)),
   );
 
   static Widget white = Container(
