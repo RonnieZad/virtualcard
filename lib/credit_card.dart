@@ -10,7 +10,7 @@ class CreditCard extends StatefulWidget {
   final String? cardNumber;
   final String? cardExpiry;
   final String? cardHolderName;
-  final String bankName;
+  final String cardTitle;
   final String? cvv;
   final Color frontTextColor;
   final Color backTextColor;
@@ -27,6 +27,7 @@ class CreditCard extends StatefulWidget {
   final String? textExpDate;
   final String? textName;
   final String? textExpiry;
+  final String cardLogo;
   final String? mask;
   final double horizontalMargin;
 
@@ -35,11 +36,12 @@ class CreditCard extends StatefulWidget {
     this.cardNumber,
     this.cardExpiry,
     this.cardHolderName,
-    this.bankName = '',
+    this.cardTitle = '',
     this.cvv,
     this.showBackSide = false,
     required this.frontBackground,
     required this.backBackground,
+    required this.cardLogo,
     this.cardType,
     this.frontLayout,
     this.backLayout,
@@ -169,7 +171,8 @@ class _CreditCardState extends State<CreditCard>
                   textExpDate: widget.textExpDate,
                   textExpiry: widget.textExpiry,
                   textName: widget.textName,
-                  bankName: widget.bankName,
+                  cardTitle: widget.cardTitle,
+                  cardLogo: widget.cardLogo,
                   cardNumber: widget.cardNumber,
                   cardExpiry: widget.cardExpiry,
                   cardHolderName: widget.cardHolderName,
